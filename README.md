@@ -6,6 +6,7 @@
 |email|string|null: false|
 |password|string|null: false|
 |username|string|null: false|
+|index|strig|null: false|
 ### Association
 - has_many :groups
 - has_many :messages
@@ -28,9 +29,6 @@
 ### Association
 - belongs_to :user
 - belongs_to :group
-- has_many :comments
-- has_many :posts_tags
-- has_many  :tags,  through:  :posts_tags
 
 
 
