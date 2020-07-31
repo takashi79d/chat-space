@@ -5,26 +5,25 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
-|index|strig|null: false|
+|name|string|null: false|
 ### Association
-- has_many :groups
+- has_many :groups,  through:  :users_groups
 - has_many :messages
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
 ### Association
-- belongs_to :user
+- has_many :users,  through:  :users_groups
 - has_many :messages
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|string|null: false|
-|group_id|integer|null: false|
+|body|text|
+|image|string|
+|group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
