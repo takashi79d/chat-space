@@ -7,6 +7,7 @@
 |password|string|null: false|
 |name|string|null: false|
 ### Association
+- has_many :users_groups
 - has_many :groups,  through:  :users_groups
 - has_many :messages
 
@@ -15,6 +16,7 @@
 |------|----|-------|
 |name|string|null: false|
 ### Association
+- has_many :users_groups
 - has_many :users,  through:  :users_groups
 - has_many :messages
 
@@ -23,7 +25,7 @@
 |------|----|-------|
 |body|text|
 |image|string|
-|group_id|integer|null: false|
+|group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
