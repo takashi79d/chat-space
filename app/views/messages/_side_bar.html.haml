@@ -1,1 +1,26 @@
-＜サイドバー＞
+.SideBar
+  .LeftHeader
+    .LeftHeader__list
+      %p.LeftHeader__userName
+        masa
+      .LeftHeader__icon
+        .LeftHeader__icon-edit
+        = link_to "#", class: "content_-btn contents__btn--edit" do
+          = icon('far', 'edit', class: "contents__btn--icon")
+        .LeftHeader__icon-cog
+        = link_to "#", class: "content_-btn contents__btn--cog" do
+          = icon('fas', 'cog', class: "contents__btn--icon")
+  .GroupList
+    .Groups
+    = link_to "#", class: "Group" do
+      %p.Group__name
+        masa
+      %p.Group__message
+        まだメッセージがありません
+
+    .Groups
+    = link_to "#", class: "Group" do
+      %p.Group__name
+        
+      %p.Group__message
+        
