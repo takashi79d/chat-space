@@ -2,13 +2,13 @@
   .LeftHeader
     .LeftHeader__list
       %p.LeftHeader__userName
-        masa
+        =current_user.name
       .LeftHeader__icon
         .LeftHeader__icon-edit
         = link_to "#", class: "content_-btn contents__btn--edit" do
           = icon('far', 'edit', class: "contents__btn--icon")
         .LeftHeader__icon-cog
-        = link_to "#", class: "content_-btn contents__btn--cog" do
+        = link_to edit_user_path(current_user), class: "content_-btn contents__btn--cog" do
           = icon('fas', 'cog', class: "contents__btn--icon")
   .GroupList
     .Groups
