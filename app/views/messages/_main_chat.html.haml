@@ -1,0 +1,36 @@
+.Chat
+  .RightHeader
+    .RightHeader__group
+      .RightHeader__groupName
+        test
+      %ul.RightHeader__memberList
+        Member : 
+        %li.RightHeader__memberList_member
+        masa
+    .RightHeader__editBtn
+      = link_to "#", class: "editBtn" do
+        Edit
+    
+  .MessageField
+    .MessaeBox
+      .MassageInfo
+        .MassageInfo__userName
+          masa
+        .MassageInfo__date
+          datetime
+      .Message
+        .Message__content
+          こんにちは
+      
+  .Footer
+    %form.Form
+      .Form__contents
+        %input{"type": "text", class: "Form__contents__text ", "placeholder": "type a message"}
+        %label{class: "Form__contents__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "Form__contents__image__file"}
+      %input{type: "submit", value: "Send", class:"submit-btn"}
+      
+
+  
+  
