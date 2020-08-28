@@ -51,36 +51,36 @@
       padding: 35px 40px 0;
       height: calc(100vh - 100px - 90px);
       overflow: scroll;
-    }
 
-    .MessageBox {
-      margin-bottom: 46px;
-    }
+      .MessageBox {
+        margin-bottom: 46px;
+        
+        .MessageInfo {
+          display: flex;
 
-    .MassageInfo {
-      display: flex;
+          &__userName {
+          font-size: 16px;
+          color: #333333;
+          }
 
-      &__userName {
-      font-size: 16px;
-      color: #333333;
-      }
-
-      &__date {
-      font-size: 12px;
-      color: #999999;
-      padding-left: 10px;
+          &__date {
+          font-size: 12px;
+          color: #999999;
+          padding-left: 10px;
+          }
+        }
+      
+        .Message {
+        
+          &__content {
+            font-size: 14px;
+            color: #434a54;
+            margin: 12px 0 46px 0px;
+          }
+        }
       }
     }
     
-    .Message {
-    
-      &__content {
-        font-size: 14px;
-        color: #434a54;
-        margin: 12px 0 46px 40px;
-      }
-    }
-
     .Footer {
       background-color: #d2d2d2;
       height: 90px;
